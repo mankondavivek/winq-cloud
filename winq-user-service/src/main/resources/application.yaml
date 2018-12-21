@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: winq-user-service
+
+server:
+  port:7000
