@@ -4,6 +4,7 @@ import io.winq.cloud.dto.request.UserRequest;
 import com.winq.cloud.dto.request.UserUpdateRequest;
 import io.winq.cloud.dto.UserResponse;
 import io.winq.cloud.exception.InvalidRequestDataException;
+import io.winq.cloud.exception.UserAlreadyExists;
 import io.winq.cloud.facade.UserFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +25,7 @@ public class UserController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<?> createUser(@RequestBody UserRequest userRequest) throws InvalidRequestDataException {
+    public ResponseEntity<?> createUser(@RequestBody UserRequest userRequest) throws InvalidRequestDataException, UserAlreadyExists {
 
         UserResponse userResponse = userFacade.createUser(userRequest);
 
