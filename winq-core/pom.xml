@@ -8,7 +8,7 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.winq.cloud</groupId>
+	<groupId>io.winq.cloud</groupId>
 	<artifactId>winq-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>winq-core</name>

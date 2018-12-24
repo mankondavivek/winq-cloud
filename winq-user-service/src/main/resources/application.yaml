@@ -1,6 +1,13 @@
+server:
+  port: 7000
+  servlet:
+    context-path: /api
+
 spring:
   application:
     name: winq-user-service
-
-server:
-  port:7000
+  data:
+    mongodb:
+      database: winq-db
+      port: 27017
+      host: localhost
