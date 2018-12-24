@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class InvalidRequestDataException extends Throwable {
+public class InvalidRequestDataException extends RuntimeException {
 
     private String message;
 }

@@ -1,6 +1,6 @@
 package io.winq.cloud.service.impl;
 
-import io.winq.cloud.exception.UserAlreadyExists;
+import io.winq.cloud.exception.UserAlreadyExistsException;
 import io.winq.cloud.model.User;
 import io.winq.cloud.repository.UserRepository;
 import io.winq.cloud.service.UserService;
@@ -14,10 +14,10 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public User createUSer(User user) throws UserAlreadyExists {
+    public User createUSer(User user) throws UserAlreadyExistsException {
 
         if(userRepository.existsByEmail(user.getEmail())){
-            throw new UserAlreadyExists("Email Id already registered.");
+            throw new UserAlreadyExistsException("Email Id already registered.");
         }
 
         User response= userRepository.save(user);
