@@ -1,13 +1,13 @@
 package io.winq.cloud.dto;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
 
-import java.util.UUID;
 
 @Data
 public class UserResponse {
 
-    private UUID id;
+    private ObjectId id;
 
     private String name;
 

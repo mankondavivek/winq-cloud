@@ -3,13 +3,14 @@ package io.winq.cloud.controller;
 import io.winq.cloud.dto.request.UserRequest;
 import com.winq.cloud.dto.request.UserUpdateRequest;
 import io.winq.cloud.dto.UserResponse;
+import io.winq.cloud.exception.InvalidRequestDataException;
 import io.winq.cloud.facade.UserFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -23,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<?> createUser(@RequestBody UserRequest userRequest){
+    public ResponseEntity<?> createUser(@RequestBody UserRequest userRequest) throws InvalidRequestDataException {
 
         UserResponse userResponse = userFacade.createUser(userRequest);
 

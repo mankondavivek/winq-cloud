@@ -1,14 +1,14 @@
-package com.winq.cloud.model;
+package io.winq.cloud.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import lombok.Getter;
 import lombok.Setter;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.UUID;
 
 @Document
 @Getter
@@ -16,7 +16,7 @@ import java.util.UUID;
 public class Option {
 
     @Id
-    private UUID id;
+    private ObjectId id;
 
     private String value;
 

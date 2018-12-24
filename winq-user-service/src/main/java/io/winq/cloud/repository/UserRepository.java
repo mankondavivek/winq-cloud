@@ -1,6 +1,7 @@
 package io.winq.cloud.repository;
 
-import com.winq.cloud.model.User;
+
+import io.winq.cloud.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
